@@ -44,5 +44,9 @@ colors:
 
 window:
     padding:
-        x: 20
-        y: 20
+        x: 80
+        y: 50
+
+title: Alacritty
+decorations: full
+

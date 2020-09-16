@@ -148,6 +148,7 @@ zplug load
 
 source ~/.profile
 alias cat='bat -p'
+alias ls='lsd'
 alias glc='gcloud'
 export LC_ALL=en_IN.UTF-8
 export LANG=en_IN.UTF-8
@@ -169,3 +170,4 @@ export PATH=$PATH:~/.jx/bin
 export PATH=$PATH:~/.jx/bin
 export PATH=$PATH:~/.jx/bin
 alias dotfiles='/usr/bin/git --git-dir=/home/sachin/.dotfiles/ --work-tree=/home/sachin'
+export PATH=$PATH:/usr/local/go/bin

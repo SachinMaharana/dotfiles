@@ -49,4 +49,6 @@ window:
 
 title: Alacritty
 decorations: full
-
+selection:
+  save_to_clipboard: true
+background_opacity: 1

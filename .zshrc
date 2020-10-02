@@ -171,3 +171,9 @@ export PATH=$PATH:~/.jx/bin
 export PATH=$PATH:~/.jx/bin
 alias dotfiles='/usr/bin/git --git-dir=/home/sachin/.dotfiles/ --work-tree=/home/sachin'
 export PATH=$PATH:/usr/local/go/bin
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/sachin/.sdkman"
+[[ -s "/home/sachin/.sdkman/bin/sdkman-init.sh" ]] && source "/home/sachin/.sdkman/bin/sdkman-init.sh"
+export PATH=$PATH:/usr/local/kubebuilder/bin
+export PATH="$HOME/.local/bin:$PATH"

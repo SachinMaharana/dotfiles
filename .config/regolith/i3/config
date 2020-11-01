@@ -1,6 +1,7 @@
 bindsym $mod+y fullscreen disable, floating enable, resize set 600 800, sticky enable, move window to position 1300 25
 
-
+exec_always --no-startup-id i3-auto-layout
+#bindsym $mod+n [class="Kitty"] scratchpad show
 ###############################################################################
 # i3-gaps config file for the Regolith Desktop Environment
 #
@@ -304,6 +305,18 @@ bindsym $mod+w exec $i3-wm.program.wifi
 ## Modify // Bluetooth Settings // <> b ##
 set_from_resource $i3-wm.program.bluetooth i3-wm.program.bluetooth gnome-control-center bluetooth
 bindsym $mod+b exec $i3-wm.program.bluetooth
+#bindsym $mod+n exec tdrop -ma -w 80% -h 60% -x 10% -y 20% kitty
+#bindsym $mod+n exec tdrop -ma -w 81% -h 60% -x 10% -y 20% alacritty
+bindsym $mod+n exec tdrop -ma -w 100% -h 60% alacritty
+#
+#
+#bindsym $mod+n exec tdrop -ma -w 81% -h 60% -x 10% -y 20% alacritty
+bindsym $mod+m exec tdrop -ma -w 100% -h 60% alacritty
+#bindsym $mod+m exec tdrop -ma -w 80% -h 60% -x 10% -y 20% kitty
+
+#
+#tdrop -ma -w 80% -h 60% -x 10% -y 20% -s dropdown alacritty
+
 
 ## Launch // File Browser // <><Shift> n ##
 set_from_resource $i3-wm.program.files i3-wm.program.files /usr/bin/nautilus --new-window
@@ -537,11 +550,11 @@ exec --no-startup-id $HOME/.config/polybar/launch.sh
 
 
 #exec_always --no-startup-id kitti3
-exec_always --no-startup-id kitti3 -- --session /home/sachin/.config/kitty/kittystartupwork
+#exec_always --no-startup-id kitti3 -- --session /home/sachin/.config/kitty/kittystartupwork
 
 #exec_always --no-startup-id kitti3 -n caterwaul -p left -s 1.0 0.3 -- --session ~/.kitty_session
 
-bindsym $mod+n nop kitti3
+#bindsym $mod+n nop kitti3
 
 
 

@@ -48,6 +48,7 @@ alias kd='kubectl describe'
 alias kbc='kubectx'
 alias vim='nvim'
 alias kns='kubens'
+#complete -F __start_kubectl k
 
 
 
@@ -147,13 +148,22 @@ source $ZSH/oh-my-zsh.sh
 zplug load
 
 source ~/.profile
-alias cat='bat -p'
+
+alias cat='bat'
 alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 alias glc='gcloud'
 export LC_ALL=en_IN.UTF-8
 export LANG=en_IN.UTF-8
 
-
+alias ch='cargo check'
+alias cr='cargo run'
+alias ca='cargo add'
+alias cb='cargo build'
+alias cbr='cargo build --release'
 eval "$(direnv hook zsh)"
 
 #source /home/sachin/.config/broot/launcher/bash/br
@@ -177,3 +187,18 @@ export SDKMAN_DIR="/home/sachin/.sdkman"
 [[ -s "/home/sachin/.sdkman/bin/sdkman-init.sh" ]] && source "/home/sachin/.sdkman/bin/sdkman-init.sh"
 export PATH=$PATH:/usr/local/kubebuilder/bin
 export PATH="$HOME/.local/bin:$PATH"
+eval $(thefuck --alias)
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+export BAT_THEME=TwoDark
+. /usr/share/autojump/autojump.sh
+fh() {
+  eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
+}
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias t="tmux"
+alias ta="t a -t"
+alias tls="t ls"
+alias tn="t new -t"

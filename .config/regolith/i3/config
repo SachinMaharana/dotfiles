@@ -194,7 +194,7 @@ bindsym $mod+minus move to scratchpad
 bindsym $mod+Shift+t focus mode_toggle
 
 ## Modify // Window Layout Mode // <> t ##
-bindsym $mod+t layout toggle tabbed splith splitv
+bindsym $mod+t layout toggle tabbed stacked splith splitv
 
 ## Modify // Move Window to Workspace 1 - 10 // <><Shift> 0..9 ##
 bindsym $mod+Shift+1 move container to workspace number $ws1
